@@ -911,24 +911,15 @@ footer {
 /* =====================================================
    MOBILE MENU TOGGLE FIX STYLES
    ===================================================== */
-@media (max-width: 760px) {
-  .nav-menu {
-    display: none; /* ஆரம்பத்தில் மறைந்திருக்கும் */
-  }
-
-  .nav-menu.mobile-open {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 14, 26, 0.98);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid var(--card-border);
-    padding: 25px 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-    text-align: center;
-    z-index: 999;
-  }
+/* FORCE MOBILE MENU OPEN */
+.nav-menu.mobile-open {
+  display: flex !important;
+  flex-direction: column !important;
+  position: absolute !important;
+  top: 70px !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: rgba(10, 14, 26, 0.98) !important;
+  backdrop-filter: blur(18px) !important;
+  z-index: 99999 !important;
 }
