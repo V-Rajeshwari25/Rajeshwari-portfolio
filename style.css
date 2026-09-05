@@ -909,10 +909,13 @@ footer {
 
 }
 /* =====================================================
-   MOBILE MENU TOGGLE STYLES
+   MOBILE MENU TOGGLE FIX STYLES
    ===================================================== */
 @media (max-width: 760px) {
-  /* மொபைல் வியூவில் மெனு ஓபன் ஆகும்போது எப்படித் தெரிய வேண்டும் */
+  .nav-menu {
+    display: none; /* ஆரம்பத்தில் மறைந்திருக்கும் */
+  }
+
   .nav-menu.mobile-open {
     display: flex !important;
     flex-direction: column;
@@ -920,11 +923,11 @@ footer {
     top: 70px;
     left: 0;
     width: 100%;
-    background: rgba(10, 14, 26, 0.95);
+    background: rgba(10, 14, 26, 0.98);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--card-border);
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 25px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     text-align: center;
     z-index: 999;
   }
