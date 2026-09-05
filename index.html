@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rajarajeshwari V | Full Stack Web Developer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =====================================================
+       PREMIUM DESIGN ENHANCEMENTS & UNIQUE BACKGROUND
+       ===================================================== */
+
+    :root {
+      --cyan-bright: #00f2fe;
+      --cyan-glow: rgba(0, 242, 254, 0.4);
+      --purple-accent: #a855f7;
+      --blue-accent: #4facfe;
+      --bg-dark: #070d19;
+      --card-bg: rgba(13, 27, 42, 0.65);
+      --card-border: rgba(0, 242, 254, 0.25);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      overflow-x: hidden;
+      color: #e2e8f0;
+      position: relative;
+    }
+
+    /* =========================
+       DYNAMIC UNIQUE BACKGROUND
+       ========================= */
+
+    .bg-aurora {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .aurora-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.25;
+      animation: floatOrb 12s infinite ease-in-out alternate;
+    }
+
+    .aurora-orb-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #00f2fe, transparent 70%);
+      top: -100px;
+      left: -100px;
+    }
+
+    .aurora-orb-2 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #7928ca, transparent 70%);
+      bottom: -150px;
+      right: -100px;
+      animation-delay: -4s;
+    }
+
+    .aurora-orb-3 {
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, #0070f3, transparent 70%);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -8s;
+    }
+
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, -30px) scale(1.1); }
+      100% { transform: translate(-30px, 50px) scale(0.95); }
+    }
+
+    .floating-particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      border: 1px solid rgba(0, 242, 254, 0.2);
+      background: rgba(0, 242, 254, 0.03);
+      backdrop-filter: blur(2px);
+      animation: spinParticle 20s infinite linear;
+    }
+
+    .particle-sq1 { width: 30px; height: 30px; top: 15%; left: 8%; border-radius: 8px; }
+    .particle-sq2 { width: 45px; height: 45px; bottom: 25%; right: 10%; border-radius: 12px; animation-duration: 25s; }
+    .particle-tri { width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 25px solid rgba(168, 85, 247, 0.15); background: transparent; top: 60%; left: 4%; }
+
+    @keyframes spinParticle {
+      from { transform: rotate(0deg) translateY(0); }
+      to { transform: rotate(360deg) translateY(-20px); }
+    }
+
+    /* =========================
+       DOUBLE SHADE NAME EFFECT
+       ========================= */
+
+    .hero-content h1 span.double-shade-name {
+      display: inline-block;
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      position: relative;
+      filter: drop-shadow(0 0 18px rgba(0, 242, 254, 0.35));
+      animation: nameGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes nameGlow {
+      0% { filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.25)); }
+      100% { filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.5)); }
+    }
+
+    /* =========================
+       RR LOGO - PREMIUM BOX
+       ========================= */
+
+    .logo {
+      border: 1px solid rgba(0, 242, 254, 0.5) !important;
+      border-radius: 12px !important;
+      padding: 7px 14px !important;
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2), inset 0 0 12px rgba(0, 242, 254, 0.1);
+      background: rgba(10, 25, 50, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 700;
+      color: #00f2fe !important;
+    }
+
+    .logo:hover {
+      transform: translateY(-2px) scale(1.03);
+      border-color: var(--cyan-bright) !important;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.4), inset 0 0 15px rgba(0, 242, 254, 0.2);
+    }
+
+    /* =========================
+       NAVBAR HOVER UNDERLINE
+       ========================= */
+
+    .nav-menu a {
+      position: relative;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #00f2fe, #a855f7);
+      transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* =========================
+       HOME GRID LINES OVERLAY
+       ========================= */
+
+    .hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.25;
+      background-image:
+        linear-gradient(rgba(0, 242, 254, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 254, 0.08) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+      -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+    }
+
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      border: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+
+    /* =====================================================
+       HERO IMAGE CARD FIX
+       ===================================================== */
+
+    .hero-image-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      animation: profileFloat 5s ease-in-out infinite;
+    }
+
+    .image-card {
+      border: 3px solid rgba(0, 242, 254, 0.85) !important;
+      border-radius: 24px;
+      padding: 6px;
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.3), rgba(168, 85, 247, 0.3));
+      box-shadow: 
+        0 0 35px rgba(0, 242, 254, 0.35), 
+        0 0 60px rgba(168, 85, 247, 0.2),
+        inset 0 0 20px rgba(0, 242, 254, 0.25);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      width: 100%;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 18px;
+      display: block;
+    }
+
+    @keyframes profileFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* =========================
+       TYPEWRITER
+       ========================= */
+
+    .typing-text {
+      display: inline-block;
+      min-height: 1.4em;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--cyan-bright);
+      padding-right: 5px;
+      color: #00f2fe;
+      font-weight: 600;
+      animation: typingCursor 0.75s step-end infinite;
+    }
+
+    @keyframes typingCursor {
+      0%, 45% { border-color: var(--cyan-bright); }
+      46%, 100% { border-color: transparent; }
+    }
+
+    /* =========================
+       GLASS CARDS & ENHANCEMENTS
+       ========================= */
+
+    .stat-card,
+    .skill-card,
+    .project-card,
+    .service-card,
+    .contact-card,
+    .why-work-box {
+      background: var(--card-bg) !important;
+      border: 1px solid var(--card-border) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      transition: all 0.35s ease;
+    }
+
+    .stat-card:hover,
+    .project-card:hover,
+    .service-card:hover,
+    .contact-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 242, 254, 0.6) !important;
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.18), 0 0 15px rgba(168, 85, 247, 0.1);
+    }
+
+    /* =========================
+       UPDATED RESUME BUTTON STYLES
+       ========================= */
+
+    .resume-cta-wrapper {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .btn-resume-glow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #a855f7 100%);
+      color: #070d19 !important;
+      border: none;
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.45);
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .btn-resume-glow:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 35px rgba(168, 85, 247, 0.6);
+      color: #ffffff !important;
+    }
+
+    .btn-resume-glow i {
+      font-size: 18px;
+    }
+
+    /* =========================
+       UPDATED WHY WORK WITH ME (WITH UNIQUE ICONS)
+       ========================= */
+
+    #skills .skills-wrapper,
+    .why-work-box {
+      width: 100%;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    #skills .skills-grid {
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    #skills .skill-card {
+      padding: 18px 20px;
+      min-height: 82px;
+      box-sizing: border-box;
+    }
+
+    .why-work-box {
+      padding: 35px 30px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .why-work-box h3 {
+      text-align: center !important;
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #00f2fe;
+      position: relative;
+      display: inline-block;
+    }
+
+    .why-work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .why-work-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: rgba(10, 25, 50, 0.6);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .why-work-item:hover {
+      transform: translateY(-4px);
+      border-color: #00f2fe;
+      background: rgba(0, 242, 254, 0.1);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+    }
+
+    .why-work-item i {
+      color: #00f2fe;
+      font-size: 20px;
+      width: 24px;
+      text-align: center;
+    }
+
+    .why-work-item span {
+      font-weight: 600;
+      color: #e2e8f0;
+      font-size: 15px;
+    }
+
+    /* =====================================================
+       CONTACT FORM & CHECKBOX ALIGNMENT FIX
+       ===================================================== */
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      background: rgba(10, 25, 50, 0.85) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      border-radius: 10px;
+      padding: 12px 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .contact-form select {
+      color-scheme: dark;
+      cursor: pointer;
+    }
+
+    .contact-form select option {
+      background-color: #070d19 !important;
+      color: #ffffff !important;
+      padding: 10px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      outline: none;
+      border-color: rgba(0, 242, 254, 0.75);
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+    }
+
+    .checkbox-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 12px !important;
+      margin: 18px 0 !important;
+      width: 100% !important;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 18px !important;
+      height: 18px !important;
+      accent-color: #00f2fe !important;
+      cursor: pointer !important;
+      margin: 0 !important;
+      flex-shrink: 0 !important;
+    }
+
+    .checkbox-row label {
+      font-size: 14px !important;
+      color: #cbd5e1 !important;
+      cursor: pointer !important;
+      line-height: 1.4 !important;
+      margin: 0 !important;
+    }
+
+    .form-error {
+      display: none;
+      color: #ff4d6d !important;
+      font-size: 13px;
+      margin-top: 7px;
+    }
+
+    .response-time-note {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 14px;
+      color: #00f2fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      opacity: 0.9;
+    }
+
+    /* =========================
+       SCROLL TO TOP BUTTON
+       ========================= */
+
+    .scroll-arrow {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #ffffff;
+      background: rgba(10, 25, 50, 0.85);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+
+    .scroll-arrow.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-arrow:hover {
+      border-color: var(--cyan-bright);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+      transform: translateY(-4px);
+      color: #00f2fe;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      .why-work-grid { grid-template-columns: repeat(2, 1fr); }
+      .image-card img { height: 380px; }
+    }
+    @media (max-width: 550px) {
+      .why-work-grid { grid-template-columns: 1fr; }
+      .image-card img { height: 320px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- DYNAMIC UNIQUE BACKGROUND -->
+  <div class="bg-aurora">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+    <div class="aurora-orb aurora-orb-3"></div>
+  </div>
+
+  <div class="floating-particles">
+    <div class="particle particle-sq1"></div>
+    <div class="particle particle-sq2"></div>
+    <div class="particle particle-tri"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        RR
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-btns">
+        <a href="#consultation" class="btn-pill outline">Free Consultation</a>
+        <a href="#contact" class="btn-pill cyan">Contact</a>
+        <a href="#contact" class="btn-pill dark">Hire Me</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero-section">
+
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-image-wrapper">
+      <div class="image-card">
+        <img
+          src="assets/profile.jpg"
+          alt="Rajarajeshwari V"
+          onerror="this.src='profile.jpg'"
+        >
+      </div>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="badge">
+        <span class="dot"></span>
+        Available for freelance work
+      </div>
+
+      <h1>
+        Hi, I'm
+        <span class="double-shade-name">
+          Rajarajeshwari V
+        </span>
+      </h1>
+
+      <p class="typing-text">
+        Full Stack Web Developer
+      </p>
+
+      <p class="subtext">
+        I build modern, responsive and database-integrated websites and web applications using clean and practical technologies.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary-cyan">
+          About Me
+        </a>
+        <a href="#projects" class="btn-outline-glow">
+          View My Work
+        </a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/v-rajeshwari25" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+
+    <div class="section-header">
+      <h2>About Me</h2>
+      <p>Get to know the developer behind the work.</p>
+    </div>
+
+    <div class="info-pills">
+      <span class="info-pill">
+        Name: <strong>Rajarajeshwari V</strong>
+      </span>
+      <span class="info-pill">
+        Role: <strong>Full Stack Web Developer</strong>
+      </span>
+      <span class="info-pill">
+        Education: <strong>MCA</strong>
+      </span>
+    </div>
+
+    <p class="about-desc">
+      I am a Full Stack Web Developer and MCA graduate with a strong foundation in web development and database-integrated applications. I enjoy creating responsive websites, working with backend APIs and building practical web solutions.
+    </p>
+
+    <p class="about-desc">
+      As a fresher, I am focused on continuously improving my technical skills and delivering clean, user-friendly and functional web experiences for personal, business and freelance projects.
+    </p>
+
+    <!-- ENHANCED RESUME BUTTON WITH COLOR FILL -->
+    <div class="resume-cta-wrapper">
+      <a href="assets/resume.pdf" target="_blank" class="btn-resume-glow">
+        <i class="fas fa-file-download"></i>
+        Download / View Resume
+      </a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>4+</h3>
+        <p>Projects</p>
+      </div>
+      <div class="stat-card">
+        <h3>8.0</h3>
+        <p>MCA CGPA</p>
+      </div>
+      <div class="stat-card">
+        <h3>10+</h3>
+        <p>Technologies</p>
+      </div>
+      <div class="stat-card">
+        <h3>24/7</h3>
+        <p>Support</p>
+      </div>
+      <div class="stat-card">
+        <h3>Fresher</h3>
+        <p>Open to Opportunities</p>
+      </div>
+      <div class="stat-card">
+        <h3>Freelance</h3>
+        <p>Ready for Projects</p>
+      </div>
+      <div class="stat-card">
+        <h3>Problem Solver</h3>
+        <p>Practical Solutions</p>
+      </div>
+      <div class="stat-card">
+        <h3>Always Learning</h3>
+        <p>Continuous Growth</p>
+      </div>
+    </div>
+
+    <div class="check-grid">
+      <div class="check-item"><i class="fas fa-check-circle"></i> Responsive Design</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> Clean Code</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> Database Integration</div>
+      <div class="check-item"><i class="fas fa-check-circle"></i> RESTful API Handling</div>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+
+    <div class="section-header">
+      <h2>Skills & Technologies</h2>
+      <p>Technologies I use to build modern websites and web applications.</p>
+    </div>
+
+    <div class="skills-wrapper">
+
+      <h3 class="skill-category-title">| Frontend</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-html5"></i> HTML5</span><span>95%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-css3-alt"></i> CSS3</span><span>92%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:92%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-js"></i> JavaScript</span><span>90%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-angular"></i> Angular</span><span>80%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <h3 class="skill-category-title">| Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-python"></i> Python</span><span>85%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-php"></i> PHP</span><span>82%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:82%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-code"></i> C / C++</span><span>75%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:75%"></div></div>
+        </div>
+      </div>
+
+      <h3 class="skill-category-title">| Backend</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-node-js"></i> Node.js</span><span>85%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-server"></i> REST APIs</span><span>85%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-php"></i> PHP</span><span>82%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:82%"></div></div>
+        </div>
+      </div>
+
+      <h3 class="skill-category-title">| Databases</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-database"></i> SQL Server</span><span>88%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:88%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-database"></i> MySQL</span><span>85%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+      </div>
+
+      <h3 class="skill-category-title">| Tools & Environment</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fab fa-github"></i> Git / GitHub</span><span>90%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-paper-plane"></i> Postman</span><span>90%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-code"></i> VS Code</span><span>95%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-info"><span><i class="fas fa-server"></i> XAMPP</span><span>85%</span></div>
+          <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHY WORK WITH ME BOX (WITH CUSTOMIZED UNIQUE ICONS) -->
+    <div class="why-work-box">
+      <h3>Why Work With Me</h3>
+      <div class="why-work-grid">
+        <div class="why-work-item"><i class="fas fa-code"></i><span>Clean Code</span></div>
+        <div class="why-work-item"><i class="fas fa-laptop-code"></i><span>Responsive Design</span></div>
+        <div class="why-work-item"><i class="fas fa-wand-magic-sparkles"></i><span>Modern UI</span></div>
+        <div class="why-work-item"><i class="fas fa-database"></i><span>Database Integration</span></div>
+        <div class="why-work-item"><i class="fas fa-bolt"></i><span>Fast Performance</span></div>
+        <div class="why-work-item"><i class="fas fa-headset"></i><span>Ongoing Support</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>A selection of web applications and projects I've developed.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-preview">
+          <i class="fas fa-cart-shopping project-big-icon"></i>
+          <h3>Full-Stack E-Commerce</h3>
+        </div>
+        <div class="project-details">
+          <h4>E-Commerce Web Application</h4>
+          <p>Responsive e-commerce application with product listings, interactive UI, Node.js REST APIs and SQL Server database integration.</p>
+          <div class="project-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>SQL Server</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer" class="btn-sm cyan">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview">
+          <i class="fas fa-cloud-sun project-big-icon"></i>
+          <h3>Weather Application</h3>
+        </div>
+        <div class="project-details">
+          <h4>Advanced Weather Application</h4>
+          <p>Responsive weather application designed to display real-time weather information through a clean and user-friendly interface.</p>
+          <div class="project-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer" class="btn-sm cyan">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview">
+          <i class="fas fa-user-lock project-big-icon"></i>
+          <h3>Login & Registration</h3>
+        </div>
+        <div class="project-details">
+          <h4>Login & Registration System</h4>
+          <p>Functional authentication system using PHP and MySQL with signup, login and database verification.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>MySQL</span><span>XAMPP</span><span>HTML5</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer" class="btn-sm cyan">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-preview">
+          <i class="fas fa-calculator project-big-icon"></i>
+          <h3>Web Calculator</h3>
+        </div>
+        <div class="project-details">
+          <h4>Responsive Web Calculator</h4>
+          <p>Interactive calculator developed with HTML, CSS and JavaScript for basic arithmetic operations.</p>
+          <div class="project-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer" class="btn-sm cyan">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="section-header">
+      <h2>Services</h2>
+      <p>Web development services based on my technical skills.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-globe"></i></div>
+        <h3>Business Website</h3>
+        <p>Professional responsive websites for businesses and small organizations.</p>
+        <ul><li>• Responsive UI</li><li>• Modern Design</li><li>• Contact Integration</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-user"></i></div>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio websites for students, job seekers and professionals.</p>
+        <ul><li>• Personal Branding</li><li>• Responsive Layout</li><li>• Project Showcase</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
+        <h3>E-Commerce Website</h3>
+        <p>Interactive online store interfaces with backend and database integration.</p>
+        <ul><li>• Product Listings</li><li>• Database Integration</li><li>• Backend APIs</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-screen"></i></div>
+        <h3>Responsive Web Development</h3>
+        <p>Websites that work smoothly across desktop, tablet and mobile devices.</p>
+        <ul><li>• Mobile Friendly</li><li>• Flexible Layout</li><li>• Cross Device UI</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend & API Development</h3>
+        <p>Backend services and REST APIs using Node.js or PHP.</p>
+        <ul><li>• RESTful APIs</li><li>• Node.js / PHP</li><li>• API Testing</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-database"></i></div>
+        <h3>Database Integration</h3>
+        <p>Database-connected applications using MySQL and SQL Server.</p>
+        <ul><li>• MySQL</li><li>• SQL Server</li><li>• Data Handling</li></ul>
+        <a href="#contact" class="link-btn">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTATION -->
+  <section id="consultation" class="section consultation-box">
+    <h2>Let's Build Your Dream Website</h2>
+    <p>Have an idea for a website or web application? Let's discuss your requirements.</p>
+
+    <div class="consultation-cards">
+      <div class="c-card">
+        <i class="fas fa-comments"></i>
+        <h4>Free Consultation</h4>
+        <p>Discuss your project requirements.</p>
+      </div>
+      <div class="c-card">
+        <i class="fas fa-code"></i>
+        <h4>Practical Solutions</h4>
+        <p>Technology choices based on your project needs.</p>
+      </div>
+      <div class="c-card">
+        <i class="fas fa-tags"></i>
+        <h4>Flexible Approach</h4>
+        <p>Suitable solutions for different project requirements.</p>
+      </div>
+    </div>
+
+    <div class="consultation-btns">
+      <a href="#contact" class="btn-pill cyan">Book Free Consultation</a>
+      <a href="https://wa.me/919363350985" target="_blank" rel="noopener noreferrer" class="btn-pill dark">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-header">
+      <h2>Let's Work Together</h2>
+      <p>Have a project in mind? I'd love to hear about it. Let's build something useful together.</p>
+    </div>
+
+    <div class="contact-wrapper">
+
+      <div class="contact-info-list">
+        <div class="contact-card">
+          <div class="c-icon"><i class="fas fa-user"></i></div>
+          <div><h4>Rajarajeshwari V</h4><p>Full Stack Web Developer</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div><h4>Email</h4><p>vrajeshwari501@gmail.com</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+          <div><h4>Phone / WhatsApp</h4><p>+91 9363350985</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><h4>Location</h4><p>Chidambaram, Tamil Nadu, India</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="c-icon"><i class="fas fa-clock"></i></div>
+          <div><h4>Working Hours</h4><p>Monday - Saturday: 9:00 AM - 7:00 PM</p></div>
+        </div>
+      </div>
+
+      <!-- FORM WITH PERFECTED CHECKBOX ALIGNMENT -->
+      <form class="contact-form" id="contactForm" action="mailto:vrajeshwari501@gmail.com" method="post" enctype="text/plain" novalidate>
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Full Name" autocomplete="name" />
+          <span id="nameError" class="form-error">Please enter your full name.</span>
+        </div>
+
+        <div class="form-row dual">
+          <div style="width:100%;">
+            <input type="email" id="email" name="email" placeholder="Email Address" autocomplete="email" />
+            <span id="emailError" class="form-error">Please enter a valid email address.</span>
+          </div>
+          <div style="width:100%;">
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel" />
+            <span id="phoneError" class="form-error">Please enter a valid phone number.</span>
+          </div>
+        </div>
+
+        <div class="form-row dual">
+          <div style="width:100%;">
+            <select id="project" name="project">
+              <option value="">Project Type</option>
+              <option value="Business Website">Business Website</option>
+              <option value="Portfolio Website">Portfolio Website</option>
+              <option value="E-Commerce Website">E-Commerce Website</option>
+              <option value="Responsive Web Development">Responsive Web Development</option>
+              <option value="Backend & API Development">Backend & API Development</option>
+              <option value="Database Integration">Database Integration</option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Custom Web Application">Custom Web Application</option>
+              <option value="Other">Other</option>
+            </select>
+            <span id="projectError" class="form-error">Please select a project type.</span>
+          </div>
+          <div style="width:100%;">
+            <select id="budget" name="budget">
+              <option value="">Budget</option>
+              <option value="₹5,000 – ₹10,000">₹5,000 – ₹10,000</option>
+              <option value="₹10,000 – ₹25,000">₹10,000 – ₹25,000</option>
+              <option value="₹25,000+">₹25,000+</option>
+              <option value="Not Sure">Not Sure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <textarea id="message" name="message" placeholder="Message" rows="5"></textarea>
+          <span id="messageError" class="form-error">Message should be at least 10 characters.</span>
+        </div>
+
+        <!-- PERFECTLY ALIGNED CHECKBOX -->
+        <div class="checkbox-row">
+          <input type="checkbox" id="consent" name="consent" />
+          <label for="consent">I agree to be contacted regarding my project.</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+
+        <p class="response-time-note">
+          <i class="fas fa-bolt"></i> Response within 24 hours
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <strong>RR</strong>
+        <p>Full Stack Web Developer</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/V-Rajeshwari25" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/v-rajeshwari25" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Rajarajeshwari V. All rights reserved.</p>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <a href="#home" class="scroll-arrow" id="scrollArrow" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+
+  <!-- EXISTING FUNCTIONAL LOGIC -->
+  <script>
+    /* TYPEWRITER */
+    const typingElement = document.querySelector(".typing-text");
+    const typingLines = [
+      "Full Stack Web Developer",
+      "Code With Purpose, Design With Impact",
+      "Creating Digital Solutions That Stand Out"
+    ];
+    let lineIndex = 0, charIndex = 0, isDeleting = false;
+
+    function typeWriter() {
+      if (!typingElement) return;
+      const currentLine = typingLines[lineIndex];
+
+      if (!isDeleting) {
+        typingElement.textContent = currentLine.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex >= currentLine.length) {
+          setTimeout(() => { isDeleting = true; typeWriter(); }, 1400);
+          return;
+        }
+        setTimeout(typeWriter, 45);
+      } else {
+        typingElement.textContent = currentLine.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex <= 0) {
+          isDeleting = false;
+          lineIndex = (lineIndex + 1) % typingLines.length;
+          setTimeout(typeWriter, 300);
+          return;
+        }
+        setTimeout(typeWriter, 25);
+      }
+    }
+    if (typingElement) { typingElement.textContent = ""; typeWriter(); }
+
+    /* SCROLL ARROW */
+    const scrollArrow = document.getElementById("scrollArrow");
+    window.addEventListener("scroll", function () {
+      if (!scrollArrow) return;
+      if (window.scrollY > 350) scrollArrow.classList.add("show");
+      else scrollArrow.classList.remove("show");
+    });
+
+    /* FORM VALIDATION LOGIC */
+    const contactForm = document.getElementById("contactForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const projectInput = document.getElementById("project");
+    const messageInput = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const phoneError = document.getElementById("phoneError");
+    const projectError = document.getElementById("projectError");
+    const messageError = document.getElementById("messageError");
+
+    function showError(el) { el.style.display = "block"; }
+    function hideError(el) { el.style.display = "none"; }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^[0-9+\-\s]{10,15}$/;
+
+    nameInput.addEventListener("focus", () => { if (nameInput.value.trim() === "") showError(nameError); });
+    emailInput.addEventListener("focus", () => { if (emailInput.value.trim() === "" || !emailPattern.test(emailInput.value.trim())) showError(emailError); });
+    phoneInput.addEventListener("focus", () => { if (phoneInput.value.trim() === "" || !phonePattern.test(phoneInput.value.trim())) showError(phoneError); });
+    projectInput.addEventListener("focus", () => { if (projectInput.value === "") showError(projectError); });
+    messageInput.addEventListener("focus", () => { if (messageInput.value.trim().length < 10) showError(messageError); });
+
+    nameInput.addEventListener("input", () => { if (nameInput.value.trim() !== "") hideError(nameError); });
+    emailInput.addEventListener("input", () => { if (emailPattern.test(emailInput.value.trim())) hideError(emailError); else showError(emailError); });
+    phoneInput.addEventListener("input", () => { if (phonePattern.test(phoneInput.value.trim())) hideError(phoneError); else showError(phoneError); });
+    projectInput.addEventListener("change", () => { if (projectInput.value !== "") hideError(projectError); });
+    messageInput.addEventListener("input", () => { if (messageInput.value.trim().length >= 10) hideError(messageError); else showError(messageError); });
+
+    contactForm.addEventListener("submit", function (event) {
+      let valid = true;
+      if (nameInput.value.trim() === "") { showError(nameError); valid = false; }
+      if (emailInput.value.trim() === "" || !emailPattern.test(emailInput.value.trim())) { showError(emailError); valid = false; }
+      if (phoneInput.value.trim() === "" || !phonePattern.test(phoneInput.value.trim())) { showError(phoneError); valid = false; }
+      if (projectInput.value === "") { showError(projectError); valid = false; }
+      if (messageInput.value.trim().length < 10) { showError(messageError); valid = false; }
+      if (!valid) event.preventDefault();
+    });
+  </script>
+
+</body>
+</html>
