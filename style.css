@@ -930,3 +930,17 @@ footer {
   display: block;
   padding: 12px 15px;
 }
+header, .nav-container {
+  overflow: visible !important;
+}
+
+.menu-toggle {
+  cursor: pointer !important;
+  z-index: 999999 !important;
+  pointer-events: auto !important;
+}
+
+/* ஐகான் டச் பிரச்சினையைத் தடுக்க */
+.menu-toggle * {
+  pointer-events: none !important;
+}
