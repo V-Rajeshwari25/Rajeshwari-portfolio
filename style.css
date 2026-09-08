@@ -2993,3 +2993,39 @@ body {
     background-size: 100% 100%;
     background-attachment: fixed;
 }
+
+/* லேப்டாப்பில் ஹேம்பர்கர் மறைக்கப்பட்டிருக்கும் */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* மொபைல் வியூவிற்கான ஸ்டைல் (Screen width 768px-க்கு குறைவாக இருக்கும்போது) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: -100%; /* ஆரம்பத்தில் மெனு வெளியே மறைந்திருக்கும் */
+        background-color: #0d0d12; /* உங்களது தீம் கலர் */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    /* ஜாவாஸ்கிரிப்ட் மூலம் கிளிப் செய்யும்போது ஓபன் ஆகும் கிளாஸ் */
+    .nav-links.active {
+        right: 0; 
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: block; /* போனில் மட்டும் ஹேம்பர்கர் ஐகான் காட்டும் */
+    }
+}

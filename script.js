@@ -1056,3 +1056,18 @@ window.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = currentWidth + '%';
     }, 40);
 });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const links = document.querySelectorAll('.nav-links li a');
+
+// ஹேம்பர்கரை கிளிக் செய்தால் மெனுவை காட்டுவது/மறைப்பது
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// மெனுவில் உள்ள ஏதேனும் ஒரு செக்ஷனை கிளிக் செய்தவுடன் ஆட்டோமேட்டிக்காக மெனு க்ளோஸ் ஆகி அந்த இடத்திற்குச் செல்ல
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
