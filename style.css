@@ -3036,49 +3036,52 @@ body {
         text-align: center;
     }
 }
-@media (max-width: 768px) {
-    /* ஹீரோ செக்ஷனை முழுமையாக வெர்டிகல் (Vertical) லேஅவுட்டாக மாற்றுதல் */
-    .hero {
+@media screen and (max-width: 900px) {
+    /* ஹீரோ செக்ஷனை முழுமையாக வெர்டிகல் (Vertical) மாற்றுதல் */
+    section#home, .hero {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
-        padding-top: 100px !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        width: 100% !important;
         height: auto !important;
-        min-height: 100vh;
+        padding: 120px 15px 50px 15px !important;
+        box-sizing: border-box !important;
     }
 
-    /* போட்டோ மற்றும் டெக்ஸ்ட் பாக்ஸ் அடுத்தடுத்து (மேலிருந்து கீழாக) வர */
-    .hero-img, .hero-content {
+    /* போட்டோ மற்றும் கண்டன்ட் அடுத்தடுத்து வர */
+    .hero-img, .hero-content, 
+    .hero img, .hero .profile-img-container {
         width: 100% !important;
         max-width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 auto 20px auto !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
     }
 
-    /* டெக்ஸ்ட் மற்றும் ஹெட்டிங் மொபைலில் கட் ஆகாமல் சரியாகத் தெரிய */
-    .hero h1, .hero-content h1 {
-        font-size: 28px !important;
+    /* டெக்ஸ்ட் மற்றும் பட்டன்கள் மொபைலில் கட் ஆகாமல் சரியாகத் தெரிய */
+    .hero-content h1 {
+        font-size: 26px !important;
         white-space: normal !important;
-        word-break: break-word;
+        word-break: break-word !important;
     }
 
-    .hero p, .hero-content p {
-        font-size: 15px !important;
+    .hero-content p {
+        font-size: 14px !important;
         max-width: 100% !important;
-        padding: 0 10px;
+        padding: 0 10px !important;
     }
 
-    /* பட்டன்கள் கீழே சரியாக சென்டர் ஆக வர */
     .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        align-items: center !important;
     }
 }
