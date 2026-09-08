@@ -3036,188 +3036,276 @@ body {
         text-align: center;
     }
 }
-/* =========================================
+/* =========================================================
    MOBILE HERO — PHOTO FIRST, CONTENT BELOW
-   ========================================= */
+   ========================================================= */
+
 @media screen and (max-width: 900px) {
 
-  .hero {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    min-height: auto !important;
+    /* MAIN HERO */
+    .hero {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
 
-    padding: 90px 20px 50px !important;
-    box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
 
-    overflow: hidden !important;
-    text-align: center !important;
-  }
+        padding: 90px 20px 60px !important;
+        margin: 0 !important;
 
-  /* =========================
-     PHOTO — FIRST
-     ========================= */
-  .hero-visual {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
 
-    width: min(300px, 82vw) !important;
-    height: 390px !important;
+        text-align: center !important;
+    }
 
-    margin: 0 auto 35px !important;
 
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    /* =====================================================
+       PHOTO — FIRST
+       ===================================================== */
 
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
+    .hero-visual {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
 
-    order: 1 !important;
-  }
+        width: min(320px, 88vw) !important;
+        height: 420px !important;
 
-  .hero-visual .profile-image-wrap {
-    width: 100% !important;
-    height: 100% !important;
+        margin: 0 auto 40px !important;
+        padding: 0 !important;
 
-    border-radius: 26px !important;
-  }
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
 
-  /* =========================
-     CONTENT — BELOW PHOTO
-     ========================= */
-  .hero-content {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
 
-    width: 100% !important;
-    max-width: 100% !important;
+        transform: none !important;
+        order: 1 !important;
+    }
 
-    margin: 0 auto !important;
-    padding: 0 !important;
 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    /* PHOTO FRAME */
+    .hero-visual .profile-image-wrap {
+        width: 100% !important;
+        height: 100% !important;
 
-    text-align: center !important;
+        margin: 0 !important;
 
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
+        overflow: hidden !important;
+        border-radius: 28px !important;
 
-    order: 2 !important;
-  }
+        transform: none !important;
+    }
 
-  /* HI I'M */
-  .hero-content .eyebrow,
-  .hero-content .hero-eyebrow {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
 
-  /* NAME */
-  .hero-content h1 {
-    width: 100% !important;
+    /* REMOVE DESKTOP VISUAL DECORATIONS */
+    .hero-visual .photo-corner,
+    .hero-visual .visual-orbit,
+    .hero-visual .visual-ring {
+        display: none !important;
+    }
 
-    font-size: clamp(38px, 10vw, 58px) !important;
-    line-height: 1.05 !important;
 
-    text-align: center !important;
+    /* =====================================================
+       CONTENT — PHOTO KU KEELAA
+       ===================================================== */
 
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: anywhere !important;
+    .hero-content {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
 
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+        width: 100% !important;
+        max-width: 700px !important;
 
-  /* FULL STACK WEB DEVELOPER */
-  .hero-content h2,
-  .hero-content .hero-role {
-    width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
 
-    font-size: clamp(27px, 7vw, 42px) !important;
-    line-height: 1.12 !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
 
-    text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
 
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: anywhere !important;
+        text-align: center !important;
 
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+        transform: none !important;
+        order: 2 !important;
+    }
 
-  /* DESCRIPTION */
-  .hero-content p {
-    width: 100% !important;
-    max-width: 600px !important;
 
-    font-size: 15px !important;
-    line-height: 1.7 !important;
+    /* HI I'M */
+    .hero-content .eyebrow,
+    .hero-content .hero-eyebrow {
+        width: 100% !important;
 
-    text-align: center !important;
+        margin: 0 0 12px !important;
 
-    margin-left: auto !important;
-    margin-right: auto !important;
+        text-align: center !important;
+    }
 
-    padding: 0 5px !important;
-    box-sizing: border-box !important;
-  }
 
-  /* =========================
-     BUTTONS
-     ========================= */
-  .hero-buttons {
-    width: 100% !important;
+    /* NAME */
+    .hero-content h1 {
+        width: 100% !important;
+        max-width: 100% !important;
 
-    display: flex !important;
-    flex-direction: column !important;
+        margin: 0 auto 20px !important;
 
-    align-items: center !important;
-    justify-content: center !important;
+        font-size: clamp(36px, 10vw, 58px) !important;
+        line-height: 1.05 !important;
 
-    gap: 14px !important;
+        text-align: center !important;
 
-    margin-top: 20px !important;
-  }
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: anywhere !important;
+    }
 
-  .hero-buttons a,
-  .hero-buttons button {
-    width: min(300px, 90%) !important;
-    box-sizing: border-box !important;
 
-    text-align: center !important;
-  }
+    /* I'M A / ROLE */
+    .hero-content h2,
+    .hero-content .hero-role {
+        width: 100% !important;
+        max-width: 100% !important;
 
-  /* =========================
-     STATS
-     ========================= */
-  .hero-stats {
-    width: 100% !important;
+        margin: 0 auto 25px !important;
 
-    display: flex !important;
-    flex-direction: column !important;
+        font-size: clamp(27px, 7vw, 42px) !important;
+        line-height: 1.12 !important;
 
-    align-items: center !important;
-    justify-content: center !important;
+        text-align: center !important;
 
-    gap: 28px !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: anywhere !important;
+    }
 
-    margin-top: 45px !important;
-  }
 
-  .hero-stats > * {
-    text-align: center !important;
-  }
+    /* DESCRIPTION */
+    .hero-content > p,
+    .hero-content .hero-description {
+        width: 100% !important;
+        max-width: 600px !important;
+
+        margin: 0 auto 28px !important;
+        padding: 0 8px !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .hero-buttons {
+        width: 100% !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 14px !important;
+    }
+
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: min(320px, 90%) !important;
+        max-width: 320px !important;
+
+        margin: 0 auto !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =====================================================
+       STATS — CONTENT KU KEELAA
+       ===================================================== */
+
+    .hero-stats {
+        width: 100% !important;
+
+        margin: 45px auto 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 30px !important;
+    }
+
+
+    .hero-stats > * {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .hero {
+        padding: 75px 15px 50px !important;
+    }
+
+    .hero-visual {
+        width: min(300px, 88vw) !important;
+        height: 390px !important;
+
+        margin-bottom: 35px !important;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(32px, 9vw, 48px) !important;
+    }
+
+    .hero-content h2,
+    .hero-content .hero-role {
+        font-size: clamp(25px, 7vw, 36px) !important;
+    }
+
+    .hero-content > p,
+    .hero-content .hero-description {
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 90% !important;
+    }
 }
