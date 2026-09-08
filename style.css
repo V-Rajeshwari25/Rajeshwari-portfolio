@@ -3036,52 +3036,188 @@ body {
         text-align: center;
     }
 }
+/* =========================================
+   MOBILE HERO — PHOTO FIRST, CONTENT BELOW
+   ========================================= */
 @media screen and (max-width: 900px) {
-    /* ஹீரோ செக்ஷனை முழுமையாக வெர்டிகல் (Vertical) மாற்றுதல் */
-    section#home, .hero {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 120px 15px 50px 15px !important;
-        box-sizing: border-box !important;
-    }
 
-    /* போட்டோ மற்றும் கண்டன்ட் அடுத்தடுத்து வர */
-    .hero-img, .hero-content, 
-    .hero img, .hero .profile-img-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin: 0 auto 20px auto !important;
-        transform: none !important;
-        left: auto !important;
-        right: auto !important;
-    }
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
 
-    /* டெக்ஸ்ட் மற்றும் பட்டன்கள் மொபைலில் கட் ஆகாமல் சரியாகத் தெரிய */
-    .hero-content h1 {
-        font-size: 26px !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-    }
+    padding: 90px 20px 50px !important;
+    box-sizing: border-box !important;
 
-    .hero-content p {
-        font-size: 14px !important;
-        max-width: 100% !important;
-        padding: 0 10px !important;
-    }
+    overflow: hidden !important;
+    text-align: center !important;
+  }
 
-    .hero-buttons {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 12px !important;
-        width: 100% !important;
-        align-items: center !important;
-    }
+  /* =========================
+     PHOTO — FIRST
+     ========================= */
+  .hero-visual {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    width: min(300px, 82vw) !important;
+    height: 390px !important;
+
+    margin: 0 auto 35px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    order: 1 !important;
+  }
+
+  .hero-visual .profile-image-wrap {
+    width: 100% !important;
+    height: 100% !important;
+
+    border-radius: 26px !important;
+  }
+
+  /* =========================
+     CONTENT — BELOW PHOTO
+     ========================= */
+  .hero-content {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    text-align: center !important;
+
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    order: 2 !important;
+  }
+
+  /* HI I'M */
+  .hero-content .eyebrow,
+  .hero-content .hero-eyebrow {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* NAME */
+  .hero-content h1 {
+    width: 100% !important;
+
+    font-size: clamp(38px, 10vw, 58px) !important;
+    line-height: 1.05 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* FULL STACK WEB DEVELOPER */
+  .hero-content h2,
+  .hero-content .hero-role {
+    width: 100% !important;
+
+    font-size: clamp(27px, 7vw, 42px) !important;
+    line-height: 1.12 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* DESCRIPTION */
+  .hero-content p {
+    width: 100% !important;
+    max-width: 600px !important;
+
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+
+    text-align: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding: 0 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* =========================
+     BUTTONS
+     ========================= */
+  .hero-buttons {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 14px !important;
+
+    margin-top: 20px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: min(300px, 90%) !important;
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+  }
+
+  /* =========================
+     STATS
+     ========================= */
+  .hero-stats {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 28px !important;
+
+    margin-top: 45px !important;
+  }
+
+  .hero-stats > * {
+    text-align: center !important;
+  }
 }
