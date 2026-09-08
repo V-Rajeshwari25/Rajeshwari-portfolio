@@ -3037,19 +3037,48 @@ body {
     }
 }
 @media (max-width: 768px) {
-    .hero, .hero-content {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        box-sizing: border-box;
+    /* ஹீரோ செக்ஷனை முழுமையாக வெர்டிகல் (Vertical) லேஅவுட்டாக மாற்றுதல் */
+    .hero {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 100px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        height: auto !important;
+        min-height: 100vh;
     }
 
-    .hero p, .hero h1, .hero-content h2, .typed-text, .typing-text {
-        font-size: 24px !important;
+    /* போட்டோ மற்றும் டெக்ஸ்ட் பாக்ஸ் அடுத்தடுத்து (மேலிருந்து கீழாக) வர */
+    .hero-img, .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* டெக்ஸ்ட் மற்றும் ஹெட்டிங் மொபைலில் கட் ஆகாமல் சரியாகத் தெரிய */
+    .hero h1, .hero-content h1 {
+        font-size: 28px !important;
         white-space: normal !important;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .hero p, .hero-content p {
+        font-size: 15px !important;
+        max-width: 100% !important;
+        padding: 0 10px;
+    }
+
+    /* பட்டன்கள் கீழே சரியாக சென்டர் ஆக வர */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
     }
 }
